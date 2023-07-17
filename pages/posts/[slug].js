@@ -10,6 +10,10 @@ function PostDetailPage(props) {
       <Head>
         <title>{props.post.title}</title>
         <meta name='description' content={props.post.excerpt} />
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={props.post.title} />
+        <meta property="og:description" content={props.post.excerpt} />
       </Head>
       <PostContent post={props.post} />
     </Fragment>
