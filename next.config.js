@@ -5,7 +5,7 @@ module.exports = (phase) => {
     return {
       reactStrictMode: true,
       experimental: {
-        newNextLinkBehavior: false,
+        newNextLinkBehavior: true,
       },
       images: {
         unoptimized: true
@@ -22,7 +22,7 @@ module.exports = (phase) => {
   return {
     reactStrictMode: true,
     experimental: {
-      newNextLinkBehavior: false,
+      newNextLinkBehavior: true,
     },
     images: {
       unoptimized: true
