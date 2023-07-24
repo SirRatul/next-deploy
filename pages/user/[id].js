@@ -22,7 +22,39 @@ const UserDetailPage = (props) => {
     )
 }
 
-export const getStaticProps = async (context) => {
+// export const getStaticProps = async (context) => {
+//     const { params } = context;
+//     const { id } = params;
+
+//     console.log('id', id)
+
+//     try {
+//         const result = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+//         // console.log('result')
+//         // console.log(result?.data)
+//         return {
+//             props: {
+//                 user: result?.data
+//             }
+//         };
+//     } catch (error) {
+//         console.log(error)
+//         return {
+//             props: {
+//                 user: {}
+//             }
+//         };
+//     }
+// }
+
+// export const getStaticPaths = () => {
+//     return {
+//         paths: [], //indicates that no page needs be created at build time
+//         fallback: 'blocking' //indicates the type of fallback
+//     }
+// }
+
+export const getServerSideProps = async (context) => {
     const { params } = context;
     const { id } = params;
 
@@ -44,13 +76,6 @@ export const getStaticProps = async (context) => {
                 user: {}
             }
         };
-    }
-}
-
-export const getStaticPaths = () => {
-    return {
-        paths: [], //indicates that no page needs be created at build time
-        fallback: 'blocking' //indicates the type of fallback
     }
 }
 

@@ -22,7 +22,7 @@ const HomePage = (props) => {
             <section className='featured-posts_latest__raFNZ'>
                 <p>Users</p>
                 {props?.users?.length > 0 && props?.users?.map((item, index) => {
-                    return <Link href={`/user/${item?.id}`} key={index} passHref={true}>
+                    return <Link legacyBehavior  href={`/user/${item?.id}`} key={index} passHref={true}>
                         <h1 role='button' className='test'>{item?.name}</h1>
                     </Link>
                 })}
