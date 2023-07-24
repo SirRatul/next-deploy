@@ -35,16 +35,14 @@ export const getStaticProps = async (context) => {
         return {
             props: {
                 user: result?.data
-            },
-            revalidate: 600,
+            }
         };
     } catch (error) {
         console.log(error)
         return {
             props: {
                 user: {}
-            },
-            revalidate: 600,
+            }
         };
     }
 }
